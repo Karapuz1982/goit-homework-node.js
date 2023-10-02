@@ -1,1 +1,3 @@
-export {default as HttpError} from "./HttpError.js";
+import HttpError from "./HttpError.js";
+
+export { HttpError };

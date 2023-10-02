@@ -1,1 +1,3 @@
-export { default as isEmptyBody } from "./isEmptyBody.js";
+import isEmptyBody from "./isEmptyBody.js";
+
+export { isEmptyBody };
