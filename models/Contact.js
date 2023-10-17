@@ -18,6 +18,11 @@ const contactSchema = new Schema(
       type: String,
       match: samplePhoneNumber,
     },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
     favorite: {
       type: Boolean,
       default: false,
