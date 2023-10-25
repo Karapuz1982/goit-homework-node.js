@@ -2,6 +2,7 @@ import express from "express";
 import contactsController from "../../controllers/contacts-controller.js";
 import {
   authenticate,
+  upload,
   isEmptyBody,
   isValidId,
 } from "../../middlewares/index.js";
@@ -24,6 +25,7 @@ contactsRouter.get("/:id", isValidId, contactsController.getById);
 
 contactsRouter.post(
   "/",
+  upload.single("avatar"),
   isEmptyBody,
   contactAddValidate,
   contactsController.add
